@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ghostvanilla — music from the deep</title>
+<meta name="description" content="ghostvanilla writes the music a reluctant heart sings when a siren offers the whole ocean — BOBBLEHEAD and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,300&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: #f4f1ea; color: #1a1512; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+.shell { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 28px 0; border-bottom: 1px solid #1a1512; position: sticky; top: 0; background: #f4f1ea; z-index: 100; }
+.brand { font-family: 'Fraunces', serif; font-weight: 700; font-size: 24px; letter-spacing: -0.01em; }
+nav { display: flex; gap: 32px; }
+nav a { font-family: 'Space Grotesk', sans-serif; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; color: #1a1512; opacity: 0.75; }
+nav a:hover { opacity: 1; }
+main { padding: 0; }
+.hero { padding: 120px 0 96px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.hero-text { max-width: 520px; }
+.eyebrow { font-family: 'Space Grotesk', sans-serif; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #c9a0dc; margin-bottom: 24px; }
+h1 { font-family: 'Fraunces', serif; font-weight: 500; font-size: clamp(56px, 8vw, 128px); line-height: 0.95; letter-spacing: -0.02em; }
+h1 em { font-style: italic; font-weight: 300; color: #ff4da6; }
+.lede { font-family: 'Fraunces', serif; font-size: clamp(20px, 2.4vw, 28px); line-height: 1.35; font-weight: 300; max-width: 480px; margin-top: 32px; opacity: 0.85; }
+.hero-visual { display: flex; justify-content: center; align-items: center; border: 1px solid #1a1512; min-height: 420px; aspect-ratio: 1/1; position: relative; overflow: hidden; background: #e8e0d1; }
+.small-orb { position: absolute; width: 120px; height: 120px; background: radial-gradient(circle, #ff9ff3 0%, transparent 70%); border-radius: 50%; top: 15%; left: 15%; opacity: 0.6; filter: blur(12px); }
+.deep-ink { background: #1a3a5c; color: #f4f1ea; }
+.deco { width: 80px; height: 1px; background: #1a1512; margin: 0 0 24px 0; display: block; }
+section { padding: 100px 0; border-top: 1px solid #1a1512; }
+section h2 { font-family: 'Fraunces', serif; font-weight: 500; font-size: clamp(36px, 5vw, 72px); line-height: 1; letter-spacing: -0.02em; max-width: 900px; margin-bottom: 64px; text-transform: uppercase; letter-spacing: -0.02em; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 48px; border-top: 1px solid #1a1512; }
+.card { padding: 40px 28px; border-right: 1px solid #1a1512; border-bottom: 1px solid #1a1512; height: 340px; display: flex; flex-direction: column; background: #faf7f2; }
+.card:nth-child(3n+1) { background: #e8e0d1; }
+.card:nth-child(3n+2) { background: #fff4f6; }
+.card h3 { font-family: 'Fraunces', serif; font-size: 26px; font-weight: 500; margin-bottom: 14px; letter-spacing: -0.01em; }
+.card p { font-size: 14px; opacity: 0.7; margin-bottom: auto; }
+.card .accent { display: inline-block; width: 16px; height: 16px; margin-bottom: 14px; border-radius: 3px; }
+.accent-music { background: #ff6b35; }
+.accent-siren { background: #b8f135; }
+.accent-pink { background: #ff4da6; }
+.accent-amber { background: #e8a33d; }
+.accent-lavender { background: #c9a0dc; }
+.accent-neon { background: linear-gradient(90deg,#ff9ff3,#70a1ff,#54a0e4,#b8f135,#ff9ff3); background-size: 200% 100%; border: none; }
+.cta { border-top: 1px solid #1a1512; padding-top: 96px; padding-bottom: 48px; display: flex; justify-content: space-between; align-items: center; gap: 40px; flex-wrap: wrap; }
+.cta .big { font-family: 'Fraunces', serif; font-weight: 500; font-size: clamp(32px, 5vw, 64px); line-height: 1.05; max-width: 600px; }
+.cta .big em { font-style: italic; color: #ff4da6; }
+.btn { display: inline-block; background: #1a1512; color: #f4f1ea; padding: 18px 40px; font-family: 'Space Grotesk', sans-serif; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; }
+.void { background: #0a0a0a; color: #f4f1ea; border-color: #262626; }
+.void h2, .void p { color: #f4f1ea; }
+.film { background: #f8f8f8; border-color: #e0e0e0; }
+.film h2 { font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 500; letter-spacing: -0.01em; }
+.film .card { background: #fcfcfc; color: #262626; border-color: #ddd; }
+.minimal { background: #ffffff; border-color: #d9d9d9; }
+.minimal h2 { font-size: 34px; font-weight: 400; letter-spacing: 0; text-transform: none; }
+.minimal .card { border-color: #e8e8e8; padding: 32px 24px; }
+.minimal .card p { opacity: 0.5; }
+.gothic { background: #1a1512; color: #f4f1ea; border-color: #333; }
+.gothic h2, .gothic p { color: #f4f1ea; }
+.gothic .card { background: #14100f; border-color: #2a2624; color: #e0d8cf; }
+.pastel { background: #c9f0e0; border-color: #a8d8c2; }
+.pastel h2 { font-size: 42px; }
+.pastel .card { background: #eef6f2; border-color: #c2e0d0; color: #1a1512; }
+.music-row { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 32px; }
+.music-link { font-family: 'Space Grotesk', sans-serif; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; color: #1a1512; border: 1px solid #1a1512; padding: 12px 20px; }
+.music-link:hover { background: #1a1512; color: #f4f1ea; }
+footer { border-top: 1px solid #1a1512; padding: 56px 0; display: flex; justify-content: space-between; font-family: 'Space Grotesk', sans-serif; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.65; }
+@media (max-width: 900px) { .hero, .grid, .cta { grid-template-columns: 1fr; flex-direction: column; align-items: flex-start; } .hero-visual { width: 100%; min-height: 300px; } nav { display: none; } .cta .big { font-size: 34px; } }
+</style>
+</head>
+<body>
+<header class="shell">
+  <div class="brand">ghostvanilla</div>
+  <nav><a href="#">Music</a><a href="#">The Story</a><a href="#">Listen</a><a href="#">Support</a></nav>
+</header>
+<main>
+  <section class="hero shell">
+    <div class="hero-text">
+      <span class="deco"></span>
+      <div class="eyebrow">music career · linktr.ee/ghostvanilla</div>
+      <h1>A voice the <em>sea</em> could not ignore.<br><em>The feast</em> is the song.</h1>
+      <p class="lede">ghostvanilla writes the music that a reluctant heart sings when a siren offers the whole ocean — from BOBBLEHEAD to the midnight hymns of the deep.</p>
+      <div class="music-row">
+        <a class="music-link" href="https://open.spotify.com/artist/2CIvDWMruQvuDzLSW2ZEcT?si=tU8wFDtQR9CzmCMbG6M_UQ" target="_blank" rel="noopener noreferrer">Spotify</a>
+        <a class="music-link" href="https://soundcloud.com/" target="_blank" rel="noopener noreferrer">SoundCloud</a>
+        <a class="music-link" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a class="music-link" href="https://instagram.com/ghostvanilla" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a class="music-link" href="https://tiktok.com/@ghostvanilla" target="_blank" rel="noopener noreferrer">TikTok</a>
+        <a class="music-link" href="https://x.com/ghostvanilla" target="_blank" rel="noopener noreferrer">X</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="small-orb"></div>
+    </div>
+  </section>
+  <section class="shell">
+    <h2>The release</h2>
+    <div class="grid">
+      <div class="card"><span class="accent accent-music"></span><h3>BOBBLEHEAD</h3><p>Song &amp; lyrics by GhostVanilla — Spotify. The first hymn of the siren's feast.</p></div>
+      <div class="card"><span class="accent accent-siren"></span><h3>THE SIREN'S FEAST</h3><p>A reluctant seafood chef is drawn into a dangerous romance.</p></div>
+      <div class="card"><span class="accent accent-pink"></span><h3>MIDNIGHT HYMNS</h3><p>Late-night listening party playlist.</p></div>
+      <div class="card"><span class="accent accent-amber"></span><h3>ANALOG GEAR</h3><p>Tracked through real outboard gear.</p></div>
+      <div class="card"><span class="accent accent-lavender"></span><h3>VANILLA OCEAN</h3><p>Cream-tinted soundscapes.</p></div>
+      <div class="card"><span class="accent accent-neon"></span><h3>NEON DREAMS</h3><p>Synth + ambient textures.</p></div>
+    </div>
+  </section>
+  <section class="minimal shell">
+    <h2>Keep it simple</h2>
+    <div class="grid">
+      <div class="card"><h3>Listen</h3><p>Stream everything in one place.</p></div>
+      <div class="card"><h3>Read</h3><p>The story behind each track.</p></div>
+      <div class="card"><h3>Support</h3><p>Keep the feast brewing.</p></div>
+    </div>
+  </section>
+  <section class="pastel shell">
+    <h2>The deep</h2>
+    <div class="cta">
+      <div class="big">Pick your mood.</div>
+      <a class="btn" href="#">Explore the discography</a>
+    </div>
+  </section>
+  <section class="void shell">
+    <h2>Support</h2>
+    <div class="grid">
+      <div class="card"><h3>Donate</h3><p>Buy ghost vanilla a (⓿_⓿)❤️ — keep the feast brewing.</p></div>
+      <div class="card"><h3>Patreon</h3><p>ghostvanilla — Music. Late access, demos, deep-sea lore.</p></div>
+      <div class="card"><h3>Merch</h3><p>Feast-branded goods coming soon.</p></div>
+    </div>
+  </section>
+</main>
+<footer class="shell">
+  <span>ghostvanilla</span>
+  <span>music · ocean · feast</span>
+</footer>
+</body>
+</html>
